@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow Functions</title>
+</head>
+<body id="body">
+    <h1>My Boring Website</h1>
+    <p id="paragraph">
+        This website is boring, with very little CSS. 
+        However, we really just care about the javascript. 
+        For example, if you click <button id="button">this button</button>, the background of this paragraph tag will change to blue.
+    </p>
+    <p>We also have a <button id="alert">alert</button> button that will grab the text from the input below and show it in a popup.</p>
+    <div>
+        <input type="text" id="popup-input">
+    </div>
+    <p>
+        We just like random interactivity in the site, including a fun effect if you hover over <span id="hover-this"><b>this.</b></span>
+    </p>
+    <p id="set-color" onclick="setBackgroundColorById('set-color', document.getElementById('color-input').value)">
+        We can click anywhere in this paragraph tag and it will change the background color to whatever is in this input: <input type="text" id="color-input"/>
+    </p>
+    <p onmouseover="mouseOverFunction(this)">
+        Moving your mouse over this text will make it black, so you cannot read it!
+    </p>
+    <script>
+        document.getElementById("button").onclick = () => {setBackgroundColorById("paragraph", "blue");}
+        
+        document.getElementById("alert").onclick =  () => {alert(document.getElementById("popup-input").value);}
+        
+        document.getElementById("hover-this").onmouseover = () => {setBackgroundColorById("body", "red");}
+        
+        document.getElementById("hover-this").onmouseout = () => {setBackgroundColorById("body", "white");}
+        
+        const getValueFromId = id => {document.getElementById(id).value;}
+        
+        const setBackgroundColorById = (id, color) => {document.getElementById(id).style = "background-color: " + color;}
+        
+        const mouseOverFunction = el => {el.style = "background-color: black";}
+        
+    </script>
+</body>
+</html>
+
+<!--origional traditional functions section
+    <script>
+        document.getElementById("button").onclick = function() {
+            setBackgroundColorById("paragraph", "blue");
+        }
+        document.getElementById("alert").onclick = function(){
+            alert(document.getElementById("popup-input").value);
+        }
+        document.getElementById("hover-this").onmouseover = function(){
+            setBackgroundColorById("body", "red");
+        }
+        document.getElementById("hover-this").onmouseout = function(){
+            setBackgroundColorById("body", "white");
+        }
+        function getValueFromId(id){
+            return document.getElementById(id).value;
+        }
+        function setBackgroundColorById(id, color){
+            document.getElementById(id).style = "background-color: " + color;
+        }
+        function mouseOverFunction(el){
+            el.style = "background-color: black";
+        }
+    </script>
+-->
