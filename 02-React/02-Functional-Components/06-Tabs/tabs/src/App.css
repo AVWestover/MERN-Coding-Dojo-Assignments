@@ -1,0 +1,15 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+.App {
+  text-align: center;
+}
+.error-text {
+  font-size:12px;
+  color:red;
+}
+#header-bg{
+  background-color:rgb(37, 37, 37);
+  color:white;
+  border-radius: 5px;
+}
