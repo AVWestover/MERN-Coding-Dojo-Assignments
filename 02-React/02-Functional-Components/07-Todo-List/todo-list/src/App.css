@@ -1,0 +1,26 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+.App {
+  text-align: center;
+  margin-top:10px;
+}
+.error-text {
+  font-size:12px;
+  color:red;
+}
+.deleteBTN{
+  margin-left:12px;
+}
+.addBTN{
+  margin-top:5px;
+}
+.todoDIV{
+  margin-top:8px;
+}
+.line-through{
+  text-decoration: line-through;
+}
+.italic{
+  font-style: italic;
+}
